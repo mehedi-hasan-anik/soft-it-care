@@ -1,0 +1,11 @@
+.form-wrapper {
+  padding: 50px 0px;
+  text-align: left;
+}
+.form-title {
+  margin-bottom: 20px;
+}
+.login-btn {
+  background: red;
+  border: none;
+}

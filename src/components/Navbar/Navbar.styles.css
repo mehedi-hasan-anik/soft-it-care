@@ -1,0 +1,15 @@
+.nav-wrapper {
+  background: #f8f9fa;
+}
+.nav-right {
+  margin-left: 150px;
+}
+.nav-right svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.nav-right span {
+  color: red;
+}
