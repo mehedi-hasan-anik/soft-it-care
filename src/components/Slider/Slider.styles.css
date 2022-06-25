@@ -4,3 +4,7 @@
 .slider-img {
   height: 150px;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}

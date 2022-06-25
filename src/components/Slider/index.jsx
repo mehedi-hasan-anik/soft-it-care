@@ -1,7 +1,10 @@
+import { Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import photo from "../../photo/5aba028cf8e6127988f1d28d863b0987.jpg";
 import "./Slider.styles.css";
+
 const Slider = () => {
   return (
     <div className="slider-wrapper">
@@ -12,6 +15,7 @@ const Slider = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           navigation={true}
+          modules={[Navigation]}
         >
           <SwiperSlide>
             <img src={photo} alt="" className="slider-img" />
