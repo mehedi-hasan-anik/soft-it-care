@@ -1,0 +1,75 @@
+.footer-wrapper {
+  background: #353535;
+  color: white;
+  padding: 50px 0px;
+  text-align: left;
+}
+.footer-wrapper h5 {
+  margin-bottom: 50px;
+}
+.contact-us {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contact-us li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact-us li svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.my-account {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.my-account li {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.input-group-text {
+  background: red;
+  color: white;
+}
+.follow-on {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.follow-on li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.footer-bottom {
+  background: #555555;
+  color: white;
+  text-align: left;
+  padding: 15px 0px;
+}
+.bottom-footer-left span {
+  color: red;
+}
+.footer-bottom-right ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer-bottom-right ul li img {
+  width: 40px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
