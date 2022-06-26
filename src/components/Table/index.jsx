@@ -1,9 +1,17 @@
 import { useState } from "react";
+import ReactPaginate from "react-paginate";
 import table from "../../data/table.json";
 import "./Table.css";
 
 const Table = () => {
   const [search, setSearch] = useState("");
+  const [pageNumber, setPageNumber] = useState(0);
+  const ticketsPerPage = 6;
+  const pageVisited = pageNumber * ticketsPerPage;
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -18,6 +26,12 @@ const Table = () => {
       return value;
     }
   });
+
+  const displayTickets = result.slice(
+    pageVisited,
+    pageVisited + ticketsPerPage
+  );
+  const pageCount = Math.ceil(result.length / ticketsPerPage);
 
   return (
     <div className="table-wrapper">
@@ -43,15 +57,35 @@ const Table = () => {
               </tr>
             </thead>
             <tbody>
-              {result?.map((item, index) => (
-                <tr key={index}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{item.name}</td>
-                  <td>{item.phone}</td>
-                  <td>{item.email}</td>
-                  <td>{item.password}</td>
-                </tr>
-              ))}
+              <>
+                <>
+                  {displayTickets.length && (
+                    <>
+                      {displayTickets.map((item, index) => (
+                        <tr key={index}>
+                          <th scope="row">{item?.id}</th>
+                          <td>{item.name}</td>
+                          <td>{item.phone}</td>
+                          <td>{item.email}</td>
+                          <td>{item.password}</td>
+                        </tr>
+                      ))}
+                    </>
+                  )}
+                </>
+                <>
+                  <ReactPaginate
+                    previousLabel={"previous"}
+                    nextLabel={"next"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttn"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                  />
+                </>
+              </>
             </tbody>
           </table>
         </div>
