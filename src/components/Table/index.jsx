@@ -44,15 +44,13 @@ const Table = () => {
             </thead>
             <tbody>
               {result?.map((item, index) => (
-                <>
-                  <tr>
-                    <th scope="row">{index + 1}</th>
-                    <td>{item.name}</td>
-                    <td>{item.phone}</td>
-                    <td>{item.email}</td>
-                    <td>{item.password}</td>
-                  </tr>
-                </>
+                <tr key={index}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{item.name}</td>
+                  <td>{item.phone}</td>
+                  <td>{item.email}</td>
+                  <td>{item.password}</td>
+                </tr>
               ))}
             </tbody>
           </table>
